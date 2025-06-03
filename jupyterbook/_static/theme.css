@@ -1,0 +1,164 @@
+/* Define the custom fonts */
+@font-face {
+    font-family: 'Axia Black';
+    src: url('_static/fonts/AxiaBlack-Regular.otf') format('opentype');
+    font-weight: 900;
+    /* Adjust as per the font specification */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Interstate';
+    src: url('_static/fonts/Interstate.woff2') format('woff2'),
+        url('_static/fonts/Interstate.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Navigo Medium';
+    src: url('_static/fonts/Navigo-Medium.woff2') format('woff2'),
+        url('_static/fonts/Navigo-Medium.woff') format('woff');
+    font-weight: 500;
+    /* Medium weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINosaur-Medium';
+    src: url('_static/fonts/DINosaur-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('_static/fonts/FiraCode-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: url('_static/fonts/Verdana.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Verdana Bold';
+    src: url('_static/fonts/Verdana-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Define the custom font stack for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Verdana Bold', 'Interstate', 'Verdana', 'DINosaur-Medium', sans-serif;
+    font-weight: normal;
+    /* Adjust this if needed */
+}
+
+/* Light theme */
+html[data-theme="light"] {
+    --pst-color-primary: #002D72;
+    /* Drexel Blue */
+    --pst-color-secondary: #006298;
+
+    /* Drexel Yellow */
+    /* Add other --pst-color variables as needed... */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--pst-color-primary);
+        border-bottom: 2px solid var(--pst-color-secondary);
+    }
+}
+
+/* Dark theme */
+html[data-theme="dark"] {
+    --pst-color-primary: #BFB8AF;
+    /* Drexel Yellow FFD100 */
+    --pst-color-secondary: #D0D3D4;
+
+    /* Drexel Blue */
+    /* Add other --pst-color variables as needed... */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--pst-color-primary);
+        border-bottom: 2px solid var(--pst-color-secondary);
+    }
+}
+
+/* Admonition styling */
+.admonition {
+    background-color: var(--pst-color-surface, #444444);
+    border-left: 4px solid var(--pst-color-primary);
+}
+
+.admonition-title {
+    color: var(--pst-color-primary);
+    background-color: var(--pst-color-background, #000000);
+}
+
+/* Apply Fira Code to the main text */
+body {
+    font-family: 'Verdana', monospace;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+/* Optionally customize other text elements */
+p {
+    font-family: 'Verdana', monospace;
+    font-size: 1rem;
+    /* Adjust font size as needed */
+}
+
+/* -- .bd-container and .bd-container__inner both need to adjust ---------- */
+/* -- this so 'outer container' grows with browser (no L/R 'dead space') -- */
+.bd-container {
+    max-width: 99%;
+}
+
+/* -- this so the 'inner container' fills the outer container -------------- */
+.bd-container .bd-container__inner {
+    max-width: 99%;
+}
+
+/* -- .bd-article-container holds the "text in the middle" (notebook / md) ------ */
+/* -- width is as high as as 100 "ems" (characters) wide, scales with font size -*/
+.bd-main .bd-content .bd-article-container {
+    max-width: 99%;
+}
+
+/* Show light logo in light mode */
+html[data-theme="light"] .logo-dark {
+    display: none;
+  }
+  html[data-theme="light"] .logo-light {
+    display: block;
+  }
+  
+  /* Show dark logo in dark mode */
+  html[data-theme="dark"] .logo-light {
+    display: none;
+  }
+  html[data-theme="dark"] .logo-dark {
+    display: block;
+  }
+  

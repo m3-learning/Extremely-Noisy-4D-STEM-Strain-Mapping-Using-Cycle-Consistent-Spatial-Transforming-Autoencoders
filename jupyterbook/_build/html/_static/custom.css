@@ -1,0 +1,23 @@
+/* Hide both logos by default */
+.logo-img {
+    height: 40px;
+    display: none;
+  }
+  
+  /* Show light logo in light mode */
+  html[data-mode="light"] .logo-light {
+    display: inline;
+  }
+  
+  /* Show dark logo in dark mode */
+  html[data-mode="dark"] .logo-dark {
+    display: inline;
+  }
+  
+  /* Optional: vertically center in navbar */
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
