@@ -12,7 +12,8 @@ logo: _static/m3-light.png  # fallback or default
 execute:
   execute_notebooks: cache
   timeout: 600
-  only_build_toc_files: true
+
+only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds
 latex:

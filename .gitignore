@@ -1,1 +1,3 @@
-jupyterbook/data/*
+jupyterbook/notebook/data/*
+jupyterbook/notebooks/simulated_data/data/*
+jupyterbook/notebook/_build/*
